@@ -1,24 +1,33 @@
-import logo from './logo.svg';
+import React, {useState} from 'react'
 import './App.css';
+import Navbar from './component/Navbar';
+import TextEditBox from './component/TextEditBox';
 
 function App() {
+  const [mode , setMode] = useState('light');
+  const [md , setMd] = useState('dark');
+
+  const mod = ()=>{
+    if(mode==='light'){
+      
+      setMode('dark');
+      
+      setMd('light');
+      document.body.style.backgroundColor = "#080763";
+      
+    }else{
+      
+      setMode('light');
+      setMd('dark');
+      document.body.style.backgroundColor = "white";
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Navbar title="TextEditor"  mode={mode} mod={mod} md={md}/>
+    <TextEditBox heading="Enter Text to edit" mode={mode}
+    pause={pause} />
+    </>
   );
 }
 
