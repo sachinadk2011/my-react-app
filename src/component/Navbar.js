@@ -1,29 +1,19 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
+
 export default function Navbar(props) {
   
   
-  /*const mod = ()=>{
-    if(mode==='light'){
-      console.log(mode);
-      console.log(md);
-      setMode('dark');
-      
-      setMd('Light');
-    }else{
-      console.log(mode);
-      setMode('light');
-      setMd('Dark');
-    }
-  }*/
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={props.mode}>
+      
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
+        <Link className="navbar-brand" to="/" >
           {props.title}
-        </a>
+        </Link>
         <button
-          className="navbar-toggler collapsed"
+          className="navbar-toggler "
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -36,23 +26,24 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
+              <Link className="nav-link active" aria-current="page"  to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <Link className="nav-link"  to="/About.js">
               {props.about}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         </div>
         <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
-   onClick={props.mod}/>
+   onClick={props.mod} style={{cursor : "pointer"}} />
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable {props.md} Mode</label>
 </div>
+
     </nav>
 
   );
