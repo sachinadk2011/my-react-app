@@ -50,7 +50,7 @@ function App() {
   
   return (
     
-    <BrowserRouter>
+    <BrowserRouter basename="/my-react-app">
     <Navbar title="TextEditor"  mode={mode} mod={mod} md={md} displayAlert={displayAlert} />
     <Alert alert={alert} displayAlert={displayAlert} />
       
