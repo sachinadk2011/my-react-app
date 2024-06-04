@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   
@@ -9,11 +9,11 @@ export default function Navbar(props) {
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={props.mode}>
       
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/TextEditBox.js" >
+        <Link className="navbar-brand" aria-current="page" to="/" >
           {props.title}
         </Link>
         <button
-          className="navbar-toggler "
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -26,7 +26,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page"  to="/TextEditBox.js">
+              <Link className="nav-link active"   to="/">
                 Home
               </Link>
             </li>
@@ -45,15 +45,12 @@ export default function Navbar(props) {
 </div>
 
     </nav>
-
   );
-
 }
 Navbar.propTypes = {
   title : PropTypes.string,
   about : PropTypes.string,
 };
-
 Navbar.defaultProps ={
   title : "dont forget to set title",
   about : "About",

@@ -51,6 +51,8 @@ function App() {
   return (
     
     <BrowserRouter basename="/my-react-app">
+    {/* <BrowserRouter basename="/my-react-app"> */}
+      
     <Navbar title="TextEditor"  mode={mode} mod={mod} md={md} displayAlert={displayAlert} />
     <Alert alert={alert} displayAlert={displayAlert} />
       
@@ -59,7 +61,7 @@ function App() {
        <Routes >
           <Route path="/about.js" element={<About mode={mode} />} />
              
-          <Route path="/TextEditBox.js" element={<TextEditBox heading="Enter Text to edit" mode={mode}
+          <Route path="/" element={<TextEditBox heading="Enter Text to edit" mode={mode}
      displayAlert={displayAlert}  />} />   
         
       </Routes>  
