@@ -9,7 +9,7 @@ export default function Navbar(props) {
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme={props.mode}>
       
       <div className="container-fluid">
-        <Link className="navbar-brand" aria-current="page" to="/TextEditBox.js" >
+        <Link className="navbar-brand" aria-current="page" to="/" >
           {props.title}
         </Link>
         <button
@@ -26,7 +26,7 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active"   to="/TextEditBox.js">
+              <Link className="nav-link active"   to="/">
                 Home
               </Link>
             </li>

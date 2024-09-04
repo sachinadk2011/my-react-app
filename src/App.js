@@ -61,7 +61,7 @@ function App() {
        <Routes >
           <Route path="/about.js" element={<About mode={mode} />} />
              
-          <Route path="/TextEditBox.js" element={<TextEditBox heading="Enter Text to edit" mode={mode}
+          <Route path="/" element={<TextEditBox heading="Enter Text to edit" mode={mode}
      displayAlert={displayAlert}  />} />   
         
       </Routes>  
