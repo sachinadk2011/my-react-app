@@ -229,7 +229,7 @@ const selectedText = selection.trim();
           <div className="container" style={{color: props.mode==='light'?'black':'white'}}>
             <h1>Summary </h1>
             <p>{text.split(/\s+/).filter((element => 
-              element.trim().length)).length} words and {text.length } characters</p>
+              element.trim().length)).length} words and {text.length } characters with spaces and {text.replace(/\s+/g, '').length} characters without spaces</p>
             <p>{0.008 * text.split(/\s+/).filter((element)=> 
               { return element.length!==0}).length} minutes to read</p>
             <h2>Preview</h2>
