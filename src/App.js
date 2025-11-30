@@ -5,7 +5,7 @@ import TextEditBox from './component/TextEditBox';
 import Alert from './component/Alert';
 import About from './component/About';
 import {
-  BrowserRouter,
+  BrowserRouter as Router,
   Routes,
   Route
   
@@ -50,8 +50,8 @@ function App() {
   
   return (
     
-    <BrowserRouter basename="/my-react-app">
-    {/* <BrowserRouter basename="/my-react-app"> */}
+    <Router>
+    
       
     <Navbar title="TextEditor"  mode={mode} mod={mod} md={md} displayAlert={displayAlert} />
     <Alert alert={alert} displayAlert={displayAlert} />
@@ -65,7 +65,7 @@ function App() {
      displayAlert={displayAlert}  />} />   
         
       </Routes>  
-    </BrowserRouter>
+    </Router>
     
   );
 }
