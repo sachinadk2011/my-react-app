@@ -1,73 +1,99 @@
-# Getting Started with Create React App
+# My React App - Text Editor Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple **React-based Text Editor** application where users can type, edit, and manipulate text efficiently. This project showcases React components, state management, routing, and deployment on GitHub Pages.
 
-Live view : https://sachinadk2011.github.io/my-react-app/
-click here u can see how it work
+## 🚀 Live Demo
 
-## Available Scripts
+Check it out here: [https://texteditor.sachinadhikari.com.np](https://texteditor.sachinadhikari.com.np)
 
-In the project directory, you can run:
+## 🛠 Features
 
-### `npm start`
+- Clean and minimal **text editing interface**
+- Convert text to **uppercase, lowercase, and more**
+- Copy text to clipboard
+- Light/Dark mode toggle
+- Alerts for user actions
+- Built with **React 18** and **React Router DOM**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📂 Folder Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+my-react-app/
+├── public/ # Static assets
+├── src/
+│ ├── components/ # Navbar, Alert, TextEditBox, About
+│ ├── App.js # Main app component
+│ └── index.js # Entry point
+├── package.json # Project metadata & dependencies
+├── README.md 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ⚡ Technologies Used
 
-### `npm run build`
+- **React 18** – For building the user interface
+- **React Router DOM** – For routing between pages
+- **CSS / Tailwind** – For styling (if used)
+- **GitHub Pages** – For deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Clone the repository and install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/sachinadk2011/my-react-app.git
+cd my-react-app
+npm install
+```
+### 💻 Running Locally
 
-### `npm run eject`
+Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
+Open http://localhost:3000 in your browser to see the app.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🚀 Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To deploy to GitHub Pages:
+1. Install the `gh-pages` package:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install gh-pages --save-dev
+```
+2. Add the following scripts to your `package.json` inside the `"scripts"` section:
 
-## Learn More
+```
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",    
+```
+3. Make sure the homepage field in package.json is set correctly:
+```json
+"homepage": "https://yourusername.github.io/your-repo-name"
+or for custom domain:
+"homepage": "https://<your-custom-domain>"
+```
+4. Run the deploy script:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm run deploy
+```
+5. Additional configuration for custom domain:
+   - Create a `CNAME` file in the `public` folder with your custom domain name.
+   - Configure DNS settings to point to GitHub Pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📖 Usage
 
-### Code Splitting
+- Enter your text in the editor
+- Use buttons to modify text (Uppercase, Lowercase, Clear, Copy)
+- Toggle Light/Dark mode using the navbar
+- Navigate to the About page to see app information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 🤝 Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 🎨 Credits / Inspiration
+This project was inspired by tutorials from [CodeWithHarry](https://www.youtube.com/watch?v=n_KtBVxBTb4&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=13). Some implementations are adapted for learning purposes.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
