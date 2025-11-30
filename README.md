@@ -17,14 +17,24 @@ Check it out here: [https://texteditor.sachinadhikari.com.np](https://texteditor
 
 ## 📂 Folder Structure
 
+```
 my-react-app/
-├── public/ # Static assets
-├── src/
-│ ├── components/ # Navbar, Alert, TextEditBox, About
-│ ├── App.js # Main app component
-│ └── index.js # Entry point
-├── package.json # Project metadata & dependencies
-├── README.md 
+│├── public/
+││   ├── index.html
+││   └── CNAME (for custom domain)
+│├── src/   
+││   ├── components/
+││   │   ├── Navbar.js
+││   │   ├── TextEditBox.js
+││   │   ├── About.js
+││   │   └── Alert.js
+││   ├── App.js
+││   ├── index.js
+││   └── App.css
+│├── .gitignore
+│├── package.json
+│└── README.md
+```
 
 
 ## ⚡ Technologies Used
@@ -69,7 +79,9 @@ npm install gh-pages --save-dev
 3. Make sure the homepage field in package.json is set correctly:
 ```json
 "homepage": "https://yourusername.github.io/your-repo-name"
+```
 or for custom domain:
+```json
 "homepage": "https://<your-custom-domain>"
 ```
 4. Run the deploy script:
@@ -78,7 +90,8 @@ or for custom domain:
 npm run deploy
 ```
 5. Additional configuration for custom domain:
-   - Create a `CNAME` file in the `public` folder with your custom domain name.
+   - Create a `CNAME` file in the `public` folder 
+   with your custom domain name.
    - Configure DNS settings to point to GitHub Pages.
 
 ### 📖 Usage
