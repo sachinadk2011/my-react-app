@@ -107,6 +107,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ### 🎨 Credits / Inspiration
 This project was inspired by tutorials from [CodeWithHarry](https://www.youtube.com/watch?v=n_KtBVxBTb4&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=13). Some implementations are adapted for learning purposes.
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
